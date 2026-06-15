@@ -10,6 +10,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 option(DISPATCHXX_BUILD_TESTS "Build the dispatchxx test suite" ON)
+option(DISPATCHXX_BUILD_EXAMPLES "Build the dispatchxx examples" ON)
 option(DISPATCHXX_SANITIZE_THREAD "Build with ThreadSanitizer" OFF)
 
 if(DISPATCHXX_SANITIZE_THREAD)
@@ -28,6 +29,10 @@ add_library(dispatchxx
 target_include_directories(dispatchxx PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(dispatchxx PUBLIC Threads::Threads)
 target_compile_options(dispatchxx PRIVATE -Wall -Wextra -Wpedantic)
+
+if(DISPATCHXX_BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
 
 if(DISPATCHXX_BUILD_TESTS)
     enable_testing()
