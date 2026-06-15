@@ -10,6 +10,7 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(dispatchxx_tests
     test_in_memory_broker.cpp
+    test_task_registry.cpp
 )
 target_link_libraries(dispatchxx_tests PRIVATE dispatchxx GTest::gtest_main)
 target_compile_options(dispatchxx_tests PRIVATE -Wall -Wextra)
