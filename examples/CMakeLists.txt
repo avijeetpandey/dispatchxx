@@ -1,0 +1,8 @@
+add_executable(example_basic_usage basic_usage.cpp)
+target_link_libraries(example_basic_usage PRIVATE dispatchxx)
+
+add_executable(example_resilience resilience_demo.cpp)
+target_link_libraries(example_resilience PRIVATE dispatchxx)
+
+add_executable(example_low_level low_level_broker.cpp)
+target_link_libraries(example_low_level PRIVATE dispatchxx)
