@@ -13,6 +13,7 @@ add_executable(dispatchxx_tests
     test_task_registry.cpp
     test_worker_pool.cpp
     test_resilience.cpp
+    test_task_queue_client.cpp
 )
 target_link_libraries(dispatchxx_tests PRIVATE dispatchxx GTest::gtest_main)
 target_compile_options(dispatchxx_tests PRIVATE -Wall -Wextra)
