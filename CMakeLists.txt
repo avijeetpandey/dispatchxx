@@ -23,6 +23,7 @@ add_library(dispatchxx
     src/InMemoryBroker.cpp
     src/TaskRegistry.cpp
     src/WorkerPool.cpp
+    src/TaskQueueClient.cpp
 )
 target_include_directories(dispatchxx PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(dispatchxx PUBLIC Threads::Threads)
